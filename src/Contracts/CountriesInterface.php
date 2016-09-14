@@ -1,6 +1,6 @@
 <?php namespace Quodos\Countries\Contracts;
 
-interface LaravelCountriesInterface
+interface CountriesInterface
 {
     /**
      * This function is used as a quick way for

@@ -1,4 +1,4 @@
-<?php namespace Quodos\Countries\Exception;
+<?php namespace Quodos\Countries\Exceptions;
 
 use RuntimeException;
 

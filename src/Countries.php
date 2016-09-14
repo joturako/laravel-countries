@@ -1,6 +1,6 @@
 <?php namespace Quodos\Countries;
 
-use Quodos\Countries\Exception\CountryListNotFoundException;
+use Quodos\Countries\Exceptions\CountryListNotFoundException;
 use RuntimeException;
 
 class Countries implements Contracts\CountriesInterface
@@ -10,7 +10,7 @@ class Countries implements Contracts\CountriesInterface
      *
      * @var   string
      */
-    protected $package_url  = 'vendor/umpirsky/country-list/country/cldr';
+    protected $package_url  = 'vendor/umpirsky/country-list/data';
 
     /**
      * The name of the country list file
@@ -39,7 +39,7 @@ class Countries implements Contracts\CountriesInterface
     {
         if ( ! sizeof($this->country_list))
         {
-            $list_url = __DIR__ . '/' . $this->package_url . '/' . $lang . '/' . $this->file_name;
+            $list_url = base_path($this->package_url) . '/' . $lang . '/' . $this->file_name;
 
             if (!file_exists($list_url))
             {
