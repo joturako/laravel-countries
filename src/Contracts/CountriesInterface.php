@@ -1,4 +1,4 @@
-<?php namespace Quodos\Countries;
+<?php namespace Quodos\Countries\Contracts;
 
 interface LaravelCountriesInterface
 {
